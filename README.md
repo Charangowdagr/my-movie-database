@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/my-movie-database.svg)](https://badge.fury.io/py/my-movie-database)
+
 # my-movie-database
 
 A command line tool to keep track of the movies you watched. Installable via pip. Uses SqlAlchemy. Built for Linux
