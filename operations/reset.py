@@ -1,6 +1,6 @@
 from rich.prompt import Confirm
 
-from movie import Movie
+from models.movie import Movie
 
 
 def reset(session, console):

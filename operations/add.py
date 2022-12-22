@@ -1,7 +1,7 @@
 from rich.prompt import Prompt
 from rich.prompt import IntPrompt
 
-from movie import Movie
+from models.movie import Movie
 
 
 def add(session, console):

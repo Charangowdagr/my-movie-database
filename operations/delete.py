@@ -1,7 +1,7 @@
 from sqlalchemy.exc import NoResultFound
 from rich.prompt import IntPrompt
 
-from movie import Movie
+from models.movie import Movie
 
 
 def delete(session, console):

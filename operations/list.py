@@ -1,6 +1,6 @@
 from rich.table import Table
 
-from movie import Movie
+from models.movie import Movie
 
 
 def list_movies(session, console):
