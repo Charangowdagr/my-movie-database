@@ -5,11 +5,11 @@ from rich.prompt import Prompt
 from rich.prompt import Confirm
 import os
 
-from models.movie import Base
-from operations.add import add
-from operations.delete import delete
-from operations.reset import reset
-from operations.list import list_movies
+from .models.movie import Base
+from .operations.add import add
+from .operations.delete import delete
+from .operations.reset import reset
+from .operations.list import list_movies
 
 
 def main(verbose=False):
