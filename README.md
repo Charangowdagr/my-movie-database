@@ -16,4 +16,4 @@ Use pip to install. Requires Python>=3.10.
 
 ## How to Run
 
-To run simply type `my-movie-database` in your terminal.
+To run, simply type `my-movie-database` in your terminal.
