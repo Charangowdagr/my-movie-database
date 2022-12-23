@@ -10,7 +10,7 @@ long_description = "A command line tool to keep track of the movies you watched.
 
 setuptools.setup(
     name="my-movie-database",
-    version="0.1.0",
+    version="0.1.1",
     author="Kumuthu Edirisinghe",
     author_email="ekumuthu@gmail.com",
     description="A command line tool to keep track of the movies you watched",
