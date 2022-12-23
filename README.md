@@ -1,4 +1,4 @@
-[//]: # ([![PyPI version]&#40;https://badge.fury.io/py/my-movie-database.svg&#41;]&#40;https://badge.fury.io/py/my-movie-database&#41;)
+[![PyPI version](https://badge.fury.io/py/my-movie-database.svg)](https://badge.fury.io/py/my-movie-database)
 
 # my-movie-database
 
