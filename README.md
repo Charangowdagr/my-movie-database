@@ -6,7 +6,7 @@ A command line tool to keep track of the movies you watched. Installable via pip
 
 ## Medium
 
-For a detailed guide on using this application refer to the Medium article at [link].
+For a detailed guide on using this application refer to the Medium article at https://medium.com/@kumuthu53/my-movie-database-9298707293fd.
 
 ## How to Install
 
