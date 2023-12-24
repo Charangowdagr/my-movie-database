@@ -1,0 +1,47 @@
+import requests
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
+
+# Telegram bot token
+TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+
+# OMDB API key
+OMDB_API_KEY = "YOUR_OMDB_API_KEY"
+
+def start(update: Update, context: CallbackContext) -> None:
+    update.message.reply_text("Welcome to the Movie Bot! Send me the name of a movie.")
+
+def movie_info(update: Update, context: CallbackContext) -> None:
+    movie_name = " ".join(context.args)
+    if not movie_name:
+        update.message.reply_text("Please provide a movie name.")
+        return
+
+    # Fetch movie info from OMDB API
+    url = f"http://www.omdbapi.com/?apikey={OMDB_API_KEY}&t={movie_name}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        movie_data = response.json()
+        if movie_data.get('Response') == 'True':
+            title = movie_data.get('Title')
+            year = movie_data.get('Year')
+            plot = movie_data.get('Plot')
+            update.message.reply_text(f"{title} ({year})\n\n{plot}")
+        else:
+            update.message.reply_text("Movie not found!")
+    else:
+        update.message.reply_text("Error fetching movie information.")
+
+def main() -> None:
+    updater = Updater(TOKEN)
+    dispatcher = updater.dispatcher
+
+    # Command handlers
+    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(CommandHandler("movie", movie_info))
+
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
